@@ -1,0 +1,17 @@
+node_modules/
+.next/
+out/
+.env
+.env*.local
+.dev.vars
+.vercel/
+.wrangler/
+*.tsbuildinfo
+vitest-results.json
+*.log
+
+# AI 工具产物（本机会话/缓存数据，不入库）
+.mimosa/
+.zcode/
+.codebuddy/
+generated-images/

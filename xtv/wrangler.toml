@@ -1,0 +1,21 @@
+# Xtv - Cloudflare Pages 部署配置
+# 本项目基于 Next.js + @cloudflare/next-on-pages，所有 API 路由运行在 Edge Runtime。
+#
+# 部署方式：
+#   1. 命令行：npm run deploy（需先 `npx wrangler login`）
+#   2. Git 集成：在 Cloudflare Dashboard → Pages 连接仓库，框架预设选 Next.js
+#
+# 环境变量请在 Cloudflare Dashboard → Pages → 项目 → Settings → Environment variables 中设置，
+# 本地预览使用 .dev.vars 文件（参考 .dev.vars.example）。
+
+name = "xtv"
+compatibility_date = "2024-12-01"
+compatibility_flags = ["nodejs_compat"]
+
+# Pages 项目配置
+[vars]
+# 运行时环境变量（非敏感）可在此声明；敏感变量请用 wrangler secret 或 Dashboard 设置
+
+# 本地预览：wrangler pages dev .vercel/output/static
+[dev]
+port = 8080
