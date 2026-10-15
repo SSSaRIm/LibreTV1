@@ -4,6 +4,9 @@
   "private": true,
   "description": "Xtv - 免费在线视频搜索与观看平台（基于 LibreTV）",
   "license": "AGPL-3.0-or-later",
+  "engines": {
+    "node": ">=18.18.0"
+  },
   "scripts": {
     "dev": "next dev -p 8080",
     "build": "next build",
