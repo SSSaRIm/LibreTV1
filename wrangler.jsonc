@@ -1,0 +1,11 @@
+{
+  // Worker 名称：必须与 Cloudflare 上已有的 Worker 完全一致
+  "name": "xtv",
+  "compatibility_date": "2025-09-01",
+
+  // 把本仓库根目录作为静态资源目录
+  // 根目录下的 index.html / css / js / _headers 会被直接对外提供
+  "assets": {
+    "directory": "."
+  }
+}
