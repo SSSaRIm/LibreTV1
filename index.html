@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#0e1013">
+  <title>追剧站 · 随时随地看剧</title>
+  <meta name="description" content="部署在 Cloudflare Pages 上的轻量追剧站：剧集发现、搜索、在线播放、追剧进度与收藏。">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%23ff4d6d'/%3E%3Cpath d='M40 30l30 20-30 20z' fill='%23fff'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://api.tvmaze.com" crossorigin>
+  <link rel="preconnect" href="https://static.tvmaze.com" crossorigin>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="#/home">
+        <span class="brand-mark">▶</span>
+        <span class="brand-name">追剧站</span>
+      </a>
+
+      <form class="search" id="searchForm" role="search">
+        <input id="searchInput" type="search" placeholder="搜索剧集 / 综艺 / 动漫…" autocomplete="off" aria-label="搜索剧集">
+        <button type="submit">搜索</button>
+      </form>
+
+      <nav class="nav">
+        <a href="#/home" data-nav="home">发现</a>
+        <a href="#/mylist" data-nav="mylist">我的追剧</a>
+        <button class="icon-btn" id="themeToggle" type="button" title="切换主题" aria-label="切换主题">🌙</button>
+      </nav>
+    </div>
+  </header>
+
+  <main id="app" class="app" aria-live="polite"></main>
+
+  <footer class="site-footer">
+    <p>剧集数据来自 <a href="https://www.tvmaze.com/api" target="_blank" rel="noopener">TVMaze</a> 公开 API · 默认播放源为公有领域/公开测试流，仅用于演示。</p>
+    <p>仅供个人学习与技术演示使用，请遵守你所在地区的版权法规。</p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/hls.js@1.5.13/dist/hls.min.js" defer></script>
+  <script src="/js/config.js" defer></script>
+  <script src="/js/store.js" defer></script>
+  <script src="/js/api.js" defer></script>
+  <script src="/js/player.js" defer></script>
+  <script src="/js/app.js" defer></script>
+</body>
+</html>
